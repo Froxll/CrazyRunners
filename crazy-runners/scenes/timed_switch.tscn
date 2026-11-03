@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cfpd52lh5vkb3"]
+
+[ext_resource type="Script" uid="uid://gn1mbtje0tup" path="res://scripts/timed_switch.gd" id="1_2og8w"]
+[ext_resource type="Texture2D" uid="uid://bbk3iajjo4l00" path="res://assets/kenney_new-platformer-pack-1.1/Vector/Tiles/switch_blue.svg" id="1_hr0vo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mycqx"]
+size = Vector2(46, 33)
+
+[node name="TimedSwitch" type="Area2D" unique_id=1159405775]
+script = ExtResource("1_2og8w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1145295857]
+texture = ExtResource("1_hr0vo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=446911162]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_mycqx")
+
+[node name="Timer" type="Timer" parent="." unique_id=1241662022]
+one_shot = true
