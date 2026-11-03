@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://3n3xkuax5dwq"]
+
+[ext_resource type="Script" uid="uid://cs5dutv5grdxy" path="res://scripts/springpad.gd" id="1_jko7k"]
+[ext_resource type="Texture2D" uid="uid://jcid0ivqtqfe" path="res://assets/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/spring_out.png" id="2_cwksx"]
+[ext_resource type="Texture2D" uid="uid://nop73cg2usc4" path="res://assets/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/spring.png" id="3_rahej"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kv060"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cwksx")
+}],
+"loop": 0,
+"name": &"bounce",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rahej")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3fol"]
+size = Vector2(48, 24)
+
+[node name="Springpad" type="Node2D" unique_id=441448820]
+
+[node name="springpad" type="Area2D" parent="." unique_id=26342087]
+collision_layer = 0
+script = ExtResource("1_jko7k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="springpad" unique_id=1455214436]
+sprite_frames = SubResource("SpriteFrames_kv060")
+animation = &"bounce"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="springpad" unique_id=1246754864]
+position = Vector2(1, -18)
+shape = SubResource("RectangleShape2D_o3fol")
+
+[connection signal="body_entered" from="springpad" to="springpad" method="_on_body_entered"]
+[connection signal="animation_finished" from="springpad/AnimatedSprite2D" to="springpad" method="_on_animated_sprite_2d_animation_finished"]

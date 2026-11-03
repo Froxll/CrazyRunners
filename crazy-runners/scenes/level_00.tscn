@@ -3,6 +3,8 @@
 [ext_resource type="TileSet" uid="uid://oct5nxag3vuc" path="res://resources/platform_tileset.tres" id="1_2nwr0"]
 [ext_resource type="PackedScene" uid="uid://dtgosouql2ofb" path="res://scenes/player.tscn" id="1_bvxu8"]
 [ext_resource type="PackedScene" uid="uid://omk2i644t10u" path="res://scenes/Spike.tscn" id="3_6vcuh"]
+[ext_resource type="PackedScene" uid="uid://3n3xkuax5dwq" path="res://scenes/springpad.tscn" id="4_kcbs5"]
+[ext_resource type="PackedScene" uid="uid://2tvbi4bcqk6j" path="res://scenes/thwomp.tscn" id="5_rtran"]
 
 [node name="Level01" type="Node2D" unique_id=865332713]
 
@@ -23,3 +25,9 @@ position = Vector2(474, 356)
 [node name="Spike2" parent="." unique_id=762592704 instance=ExtResource("3_6vcuh")]
 position = Vector2(799, 676)
 scale = Vector2(3.415, 0.9)
+
+[node name="Springpad" parent="." unique_id=441448820 instance=ExtResource("4_kcbs5")]
+position = Vector2(656, 356)
+
+[node name="Thwomp" parent="." unique_id=1380252230 instance=ExtResource("5_rtran")]
+position = Vector2(1114, 26)
