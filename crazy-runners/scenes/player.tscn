@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dtgosouql2ofb"]
+[gd_scene format=3 uid="uid://dtgosouql2ofb"]
 
 [ext_resource type="Texture2D" uid="uid://cpf4gk1ecmiwd" path="res://assets/kenney_new-platformer-pack-1.1/Sprites/Characters/Default/character_yellow_idle.png" id="1_qhqgy"]
 [ext_resource type="Script" uid="uid://bdsxfk0gvhjv5" path="res://scripts/player.gd" id="1_qlg0r"]
@@ -12,7 +12,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_qhqgy")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Idle",
 "speed": 5.0
 }, {
@@ -20,7 +20,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_qlg0r")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Jump",
 "speed": 5.0
 }, {
@@ -31,7 +31,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_qlg0r")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Walk",
 "speed": 7.0
 }]
@@ -43,25 +43,27 @@ size = Vector2(62, 86)
 radius = 30.0
 height = 88.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1421694259]
 script = ExtResource("1_qlg0r")
 speed = 400.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=142893420]
 sprite_frames = SubResource("SpriteFrames_tuyoq")
 animation = &"Idle"
 frame_progress = 0.41731688
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1293841157]
 position = Vector2(1, 15)
 shape = SubResource("RectangleShape2D_qlg0r")
 
-[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=461914796]
 
-[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=559931700]
 
-[node name="Hurtbox" type="Area2D" parent="." groups=["player_hurtbox"]]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=416394699 groups=["player_hurtbox"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=2041144829]
 position = Vector2(0, 16)
 shape = SubResource("CapsuleShape2D_qlg0r")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1687698357]
