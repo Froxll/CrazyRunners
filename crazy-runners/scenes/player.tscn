@@ -43,7 +43,7 @@ size = Vector2(62, 86)
 radius = 30.0
 height = 88.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1421694259]
+[node name="Player" type="CharacterBody2D" unique_id=1421694259 groups=["player"]]
 script = ExtResource("1_qlg0r")
 speed = 400.0
 

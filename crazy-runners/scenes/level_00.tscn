@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://oct5nxag3vuc" path="res://resources/platform_tileset.tres" id="1_2nwr0"]
 [ext_resource type="PackedScene" uid="uid://dtgosouql2ofb" path="res://scenes/player.tscn" id="1_bvxu8"]
+[ext_resource type="PackedScene" uid="uid://omk2i644t10u" path="res://scenes/Spike.tscn" id="3_6vcuh"]
 
 [node name="Level01" type="Node2D" unique_id=865332713]
 
@@ -15,3 +16,10 @@ tile_set = ExtResource("1_2nwr0")
 
 [node name="Player" parent="." unique_id=1411972496 instance=ExtResource("1_bvxu8")]
 position = Vector2(43, 296)
+
+[node name="Spike" parent="." unique_id=2025803881 instance=ExtResource("3_6vcuh")]
+position = Vector2(474, 356)
+
+[node name="Spike2" parent="." unique_id=762592704 instance=ExtResource("3_6vcuh")]
+position = Vector2(799, 676)
+scale = Vector2(3.415, 0.9)
