@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://oct5nxag3vuc"]
+[gd_resource type="TileSet" format=3 uid="uid://oct5nxag3vuc"]
 
 [ext_resource type="Texture2D" uid="uid://r2e826wcvlxc" path="res://assets/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-tiles-default.png" id="1_21usw"]
 [ext_resource type="Texture2D" uid="uid://vi0v5rhev80d" path="res://assets/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-backgrounds-default.png" id="2_8ixiq"]
