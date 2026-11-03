@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cdbiw04lr6yye"]
+
+[ext_resource type="Texture2D" uid="uid://dcodkaxftgdxw" path="res://assets/kenney_new-platformer-pack-1.1/Vector/Tiles/block_blue.svg" id="1_8yruy"]
+[ext_resource type="Script" uid="uid://bxuc5cbwnekq7" path="res://scripts/timed_block.gd" id="1_p4k73"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mycqx"]
+size = Vector2(58, 57)
+
+[node name="TimedBlock" type="StaticBody2D" unique_id=1353565565]
+script = ExtResource("1_p4k73")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1904781193]
+texture = ExtResource("1_8yruy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1741681857]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_mycqx")
